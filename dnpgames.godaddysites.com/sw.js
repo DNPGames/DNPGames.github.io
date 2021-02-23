@@ -1,13 +1,13 @@
 "use strict";
 
-const CACHE_NAME = 'dnpgames.com-1614043227907';
+const CACHE_NAME = 'dnpgames.godaddysites.com-1614047556812';
 const SW_SUPPORTED_PROTOCOL_REGEX = /http(s?):/;
 const pageUrls = JSON.parse('["/","/minecraft","/gmod","/donations"]');
-const staticAssets = JSON.parse('["https://img1.wsimg.com/poly/v2/polyfill.min.js?unknown=polyfill&flags=gated&features=default%2Cfetch%2CArray.prototype.%40%40iterator%2CArray.prototype.find%2CArray.prototype.findIndex%2CFunction.name%2CNumber.isFinite%2CPromise%2CString.prototype.repeat%2CMath.sign%2CMath.trunc%2CArray.prototype.includes%2CObject.entries%2CObject.values%2CObject.is%2CIntersectionObserver%2CIntl.~locale.en-US","//img1.wsimg.com/blobby/go/77ddb91d-7cfb-4359-9efa-04f3ff8a1dbf/gpub/a138a33a8843bbb9/script.js","//img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.4.6.5.js","//fonts.googleapis.com/css?family=Muli:400&display=swap","//fonts.googleapis.com/css?family=Quicksand:400,700&display=swap","https://fonts.googleapis.com/css?family=Damion&display=swap"]');
+const staticAssets = JSON.parse('["https://img1.wsimg.com/poly/v2/polyfill.min.js?unknown=polyfill&flags=gated&features=default%2Cfetch%2CArray.prototype.%40%40iterator%2CArray.prototype.find%2CArray.prototype.findIndex%2CFunction.name%2CNumber.isFinite%2CPromise%2CString.prototype.repeat%2CMath.sign%2CMath.trunc%2CArray.prototype.includes%2CObject.entries%2CObject.values%2CObject.is%2CIntersectionObserver%2CIntl.~locale.en-US","//img1.wsimg.com/blobby/go/77ddb91d-7cfb-4359-9efa-04f3ff8a1dbf/gpub/fa9f889701851ff1/script.js","//img1.wsimg.com/ceph-p3-01/website-builder-data-prod/static/widgets/UX.4.6.5.js","//fonts.googleapis.com/css?family=Muli:400&display=swap","//fonts.googleapis.com/css?family=Quicksand:400,700&display=swap","https://fonts.googleapis.com/css?family=Damion&display=swap"]');
 const networkOnlyUrls = JSON.parse('["https://api.ola.godaddy.com","https://77ddb91d-7cfb-4359-9efa-04f3ff8a1dbf.onlinestore.godaddy.com","https://img.secureserver.net/t/1/tl/event","https://img.test-secureserver.net/t/1/tl/event","https://www.google-analytics.com/collect","https://calendar.apps.dev-secureserver.net","https://calendar.apps.test-secureserver.net","https://calendar.apps.secureserver.net"]');
-const networkOnlyUrlsRegex = JSON.parse('["dnpgames.com/m/api/.*","dnpgames.com(?:/.*)?/ola/services/.*","dnpgames.com/ola/meetings/.*","dnpgames.com/g/api/.*","securepay.godaddy.com/api/apps/ola/accounts/.*"]').map(regexString => new RegExp(regexString));
+const networkOnlyUrlsRegex = JSON.parse('["dnpgames.godaddysites.com/m/api/.*","dnpgames.godaddysites.com(?:/.*)?/ola/services/.*","dnpgames.godaddysites.com/ola/meetings/.*","dnpgames.godaddysites.com/g/api/.*","securepay.godaddy.com/api/apps/ola/accounts/.*"]').map(regexString => new RegExp(regexString));
 const networkThenCacheUrls = JSON.parse('["https://blog.apps.secureserver.net/v1/website/77ddb91d-7cfb-4359-9efa-04f3ff8a1dbf/feed/post/","https://blog.apps.secureserver.net/v1/website/77ddb91d-7cfb-4359-9efa-04f3ff8a1dbf/feed"]');
-const networkThenCacheUrlsRegex = JSON.parse('["dnpgames.com(?:/.*)?/f/.*"]').map(regexString => new RegExp(regexString));
+const networkThenCacheUrlsRegex = JSON.parse('["dnpgames.godaddysites.com(?:/.*)?/f/.*"]').map(regexString => new RegExp(regexString));
 self.addEventListener('unhandledrejection', function (event) {
   // eslint-disable-next-line no-console
   console.warn('sw unhandledrejection error: ', event.reason);
